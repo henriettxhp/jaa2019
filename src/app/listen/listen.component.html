@@ -1,15 +1,20 @@
 <div class="container">
 	<div class="row">
-    	<div class="col-6">
-        <h1>Listenansicht</h1>
+		<div class="col-12">
+			<h1>Listenansicht</h1>
 			<form>
 				Zähle von 0 bis <input type="number" name="ende"
-                   [(ngModel)]="ende" class="form-control" />
+                   [(ngModel)]="ende" 
+                   class="form-control" />
   <br/>
   <button class="btn btn-outline-info"
           (click)="zaehle()">Los!</button>
   </form>
-  {{liste}}
+
+  <ul *ngFor="let zahl of liste">
+    <li>{{zahl}}</li>
+  </ul>
+
       </div>
   </div>
 </div>
